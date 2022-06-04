@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": " npx cypress run --record --key 2fa7aa65-8350-4ef6-985f-2b9db22284df"
+  },
+  "dependencies": {
+    "cypress-file-upload": "^5.0.8"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.26.5"
+  }
+}
