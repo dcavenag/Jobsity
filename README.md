@@ -6,6 +6,8 @@ Ensure you have NPM installed first
 
 Go to the cloned folder and install cypress using npm `npm install cypress --save-dev`
 
+Once installed, install the dependencies running `npm i -d`
+
 Once installed you can run the whole test suite using this command `npm run cypress:run`
 
 This will create a new run that you can access here https://dashboard.cypress.io/projects/eoq7ig/runs
