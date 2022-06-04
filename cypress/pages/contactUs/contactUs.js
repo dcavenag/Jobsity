@@ -20,17 +20,21 @@ class ContactUsPage extends Header {
       cy.contains('Message')
   }
 
-  fillForm(subject, email, message, order_reference="", file="") {
-    this.getSubjectFld().select(subject)
-    if (subject == 'Customer service'){
-      cy.contains('For any question about a product, an order')
-    } else if (subject == 'Webmaster'){
-      cy.contains('If a technical problem occurs on this website')
+  fillForm(subject="", email="", message="", order_reference="", file="") {
+    if (subject != ""){
+      this.getSubjectFld().select(subject)
+      if (subject == 'Customer service'){
+        cy.contains('For any question about a product, an order')
+      } else if (subject == 'Webmaster'){
+        cy.contains('If a technical problem occurs on this website')
+      }
     }
-
-    this.getEmailAddressFld().clear().type(email)
-    this.getMessageFld().clear().type(message)
-
+    if (email != ""){
+      this.getEmailAddressFld().clear().type(email)
+    }
+    if (message != ""){
+      this.getMessageFld().clear().type(message)
+    }
     if (order_reference != ""){
       this.getOrderReferenceFld().clear().type(order_reference)
     }
